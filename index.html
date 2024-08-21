@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <div class="div-calculadora">
+        <div class="div-cabecalho">
+            <div class="titulo">
+                <h1>CALCULADORA</h1>
+            </div>
+            <div>
+                <div class="configuracao">
+                    <p>1</p><p>2</p><p>3</p>
+                </div>
+                <div class="div-button">
+                    <p class="tema">TEMA</p>
+                    <div class="bolinha"></div>
+                    <div class="button-tema">
+                        <input id="escuro" type="checkbox" class="input-tema" onclick="mudarParaEscuro()">
+                        <input id="claro" class="input-tema" type="checkbox" onclick="mudarParaClaro()">
+                        <input id="neon" class="input-tema" type="checkbox" onclick="mudarParaNeon()"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input disabled id="tela" class="input-tela" type="text">
+        <div class="div-teclado">
+            <div class="div-grid-1">
+                <button onclick="mostrarNaTela('7')" class="operadores">7</button>
+                <button onclick="mostrarNaTela('8')" class="operadores">8</button>
+                <button onclick="mostrarNaTela('9')" class="operadores">9</button>
+                <button onclick="deletarDigito()"  class="deletar">DEL</button>
+                <button onclick="mostrarNaTela('4')" class="operadores">4</button>
+                <button onclick="mostrarNaTela('5')" class="operadores">5</button>
+                <button onclick="mostrarNaTela('6')" class="operadores">6</button>
+                <button onclick="mostrarNaTela('+')" class="operadores">+</button>
+                <button onclick="mostrarNaTela('1')" class="operadores">1</button>
+                <button onclick="mostrarNaTela('2')" class="operadores">2</button>
+                <button onclick="mostrarNaTela('3')" class="operadores">3</button>
+                <button onclick="mostrarNaTela('-')" class="operadores">-</button>
+                <button onclick="mostrarNaTela('.')" class="operadores">,</button>
+                <button onclick="mostrarNaTela('0')" class="operadores">0</button>
+                <button onclick="mostrarNaTela('/')" class="operadores">/</button>
+                <button onclick="mostrarNaTela('*')" class="operadores">×</button>
+            </div>
+            <div class="div-grid-2">
+                <button onclick="limparTela()" class="limpar">LIMPAR</button>
+                <button onclick="calcular()" class="igual">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts.js"></script>
+</html>
